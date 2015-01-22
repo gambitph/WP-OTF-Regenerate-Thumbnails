@@ -31,5 +31,8 @@ This plugin solves all of the above. No need to regenerate anything anymore.
 
 # History
 
-This plugin deprecates our old [bfi_thumb](https://github.com/bfintal/bfi_thumb) script. bfi_thumb was also an on the fly image resizer for WordPress, but it included features like modifying grayscale, opacity, resizing image up, etc.
+**This plugin deprecates our old [bfi_thumb](https://github.com/bfintal/bfi_thumb) script.**
 
+bfi_thumb was also an on-the-fly image resizer for WordPress, but it included features like modifying grayscale, opacity, resizing image up, etc. Practically speaking, we **rarely** used those other features. And I'm guessing in a few years filters will be purely CSS also. The script became buggy and most likely it's because of those features. The script itself definitely was not created ***the WordPress Way***.
+
+So now, we've removed all of those unused features and now the script is a plain good ol' image resizer that uses WordPress' hooks to work, no fancy function calls that you'll need to call (ala-[timthumb](http://www.binarymoon.co.uk/projects/timthumb/) & ala-[bfi_thumb](https://github.com/bfintal/bfi_thumb)).
