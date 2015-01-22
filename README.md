@@ -23,7 +23,7 @@ This plugin solves all of the above. No need to regenerate anything anymore.
 * All calls to `the_post_thumbnail` and other thumbnail functions are handled automatically
 * Handles image sizes created from `add_image_size`,
 * Handles [2-item array sizes](http://codex.wordpress.org/Function_Reference/the_post_thumbnail)
-* 
+
 # Usage
 
 1. Install & activate in WordPress
