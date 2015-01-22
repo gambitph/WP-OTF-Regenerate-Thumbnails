@@ -43,4 +43,6 @@ bfi_thumb was also an on-the-fly image resizer for WordPress, but it included fe
 
 So now, we've removed all of those unused features and now the script is a plain good ol' image resizer that uses WordPress' hooks to work, no fancy function calls that you'll need to call (ala-[timthumb](http://www.binarymoon.co.uk/projects/timthumb/) & ala-[bfi_thumb](https://github.com/bfintal/bfi_thumb)).
 
-Inspired by: https://wordpress.stackexchange.com/questions/53344/how-to-generate-thumbnails-when-needed-only/124790#124790
+*Inspired by:*
+* https://wordpress.stackexchange.com/questions/53344/how-to-generate-thumbnails-when-needed-only/124790#124790
+* http://codex.wordpress.org/Function_Reference/get_intermediate_image_sizes
