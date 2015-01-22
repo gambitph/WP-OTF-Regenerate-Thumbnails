@@ -1,0 +1,52 @@
+=== Plugin Name ===
+Contributors: bfintal
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=D2MK28E7BDLHC
+Tags: thumbnail, thumbnails, resize, regenerate, automatic, featured image, feature image, on the fly, otf
+Requires at least: 3.8
+Tested up to: 4.1
+Stable tag: 1.0
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Automatically regenerates your thumbnails on the fly when thumbnail sizes change.
+
+== Description ==
+
+This plugin behaves similarly to [Regenerate Thumbnails](https://wordpress.org/plugins/regenerate-thumbnails/) except that images are resized automatically / on the fly, when they are used. Once created, they won't be processed again.
+
+Your thumbnails will now resize when:
+* Image Sizes in **Settings > Media** is modified,
+* Switching themes & plugins with different thumbnail / featured image sizes
+
+No settings pages, just install and activate and things should work right away.
+
+Report bugs and help out in the code from the [Github repository](https://github.com/gambitph/WP-OTF-Regenerate-Thumbnails)
+
+= Features =
+
+* Creates Resizes thumbnails on the fly
+* Handles Image Size settings changes in **Settings > Media**
+* Handles thumbnail / image size changes introduced by switching themes & plugins
+* Works automatically, no setup needed
+* All calls to `the_post_thumbnail` and other thumbnail functions are handled automatically
+* Handles image sizes created from `add_image_size`,
+* Handles [2-item array sizes](http://codex.wordpress.org/Function_Reference/the_post_thumbnail)
+
+== Installation ==
+
+1. Head over to Plugins > Add New in the admin
+2. Search for "OFT Regenerate Thumbnails"
+3. Install & activate the plugin
+
+== Screenshots ==
+
+1. This is my Settings > Media screen, the thumbnails specified as 80 x 80
+2. This is what my gallery looks like. Yup, it's 80 x 80
+3. I just changed my Settings > Media thumbnails to 400 x 200
+4. But, my gallery thumbnails still look like it's all 80 x 80 :(
+5. After turning on the OTF Regenerate Thumbnails, my gallery now shows 400 x 200 thumbnails :)
+
+== Changelog ==
+
+= 1.0 =
+First release

@@ -2,7 +2,7 @@
 
 #### Regenerates thumbnails on the fly for WordPress. 
 
-This plugin behaves similarly to [Regenerate Thumbnails](https://wordpress.org/plugins/regenerate-thumbnails/) exept that images are resized automatically / on the fly, when they are used. Once created, they won't be processed again.
+This plugin behaves similarly to [Regenerate Thumbnails](https://wordpress.org/plugins/regenerate-thumbnails/) except that images are resized automatically / on the fly, when they are used. Once created, they won't be processed again.
 
 Your thumbnails will now resize when:
 * Image Sizes in **Settings > Media** is modified,
@@ -10,7 +10,15 @@ Your thumbnails will now resize when:
 
 No settings pages, just install and activate and things should work right away.
 
-# What? Why?
+# What are you talking about?
+
+Test it out. In your normal WordPress website set up, create a gallery using the **Add Media** button while editing a post or page and use thumbnails. Afterwards, check out your gallery.
+
+Notice the size of your thumbnails. Now head over to **Settings > Media** and change your thumbnail size to something more cool, say, **400 x 200**. Save it.
+
+Go back to your gallery that you created and refresh your browser. Most likely you won't be seeing **400 x 200** thumbnails there. Why? Read on.
+
+# Why?
 
 **WordPress only generates thumbnails when they're uploaded**, that means that themes &amp; plugins that have different sized thumbnails won't have the right dimensions for images that already exist in your site.
 
@@ -30,10 +38,11 @@ This plugin solves all of the above. No need to regenerate anything anymore.
 * Handles image sizes created from `add_image_size`,
 * Handles [2-item array sizes](http://codex.wordpress.org/Function_Reference/the_post_thumbnail)
 
-# Usage
+# Installation
 
-1. Install & activate in WordPress
-2. Sit back and relax
+1. Head over to Plugins > Add New in the admin
+2. Search for "OFT Regenerate Thumbnails"
+3. Install & activate the plugin
 
 # History
 
