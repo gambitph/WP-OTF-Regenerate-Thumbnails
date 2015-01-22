@@ -14,19 +14,21 @@ No settings pages, just install and activate and things should work right away.
 
 Test it out. In your normal WordPress website set up, create a gallery using the **Add Media** button while editing a post or page and use thumbnails. Afterwards, check out your gallery.
 
-Notice the size of your thumbnails. Now head over to **Settings > Media** and change your thumbnail size to something more cool, say, **400 x 200**. Save it.
+Notice the size of your thumbnails, most likely they're **150 x 150**. Do you see it? Great.
 
-Go back to your gallery that you created and refresh your browser. Most likely you won't be seeing **400 x 200** thumbnails there. Why? Read on.
+Now head over to **Settings > Media** and change your thumbnail size to something cooler, something rectangular, let's try **400 x 200**. Save it.
+
+Go back to your gallery that you previously created and refresh your browser. Most likely you *won't* be seeing **400 x 200** thumbnails there. Why? Read on.
 
 # Why?
 
-**WordPress only generates thumbnails when they're uploaded**, that means that themes &amp; plugins that have different sized thumbnails won't have the right dimensions for images that already exist in your site.
+**WordPress only generates thumbnails when they're uploaded**, that means that themes &amp; plugins that have different sized thumbnails won't have the right dimensions for images that already exist in your site. WordPress uses the closest size that it already has generated instead.
 
-There are regenerate thumbnail plugins already existing for WordPress, but those are manually triggered and goes through your whole uploads folder. That may take a while especially for large sites.
+There are regenerate thumbnail plugins already existing for WordPress, but those are manually triggered and goes through all of your attachments (or lets you choose from them). That may take a while especially for large sites.
 
 Lastly, WP functions allow [2-item array sizes](http://codex.wordpress.org/Function_Reference/the_post_thumbnail) to be used for thumbnails; however those do not work as expected because of the resize behavior of WordPress.
 
-This plugin solves all of the above. No need to regenerate anything anymore.
+This plugin solves all of the above. No need to regenerate anything anymore since they're done on the fly with only a little overhead.
 
 # Features
 
