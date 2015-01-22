@@ -2,7 +2,11 @@
 
 #### Regenerates thumbnails on the fly for WordPress. 
 
-This plugin behaves similarly to [Regenerate Thumbnails](https://wordpress.org/plugins/regenerate-thumbnails/) exept that images are resized automatically / on the fly, when they are used.
+This plugin behaves similarly to [Regenerate Thumbnails](https://wordpress.org/plugins/regenerate-thumbnails/) exept that images are resized automatically / on the fly, when they are used. Once created, they won't be processed again.
+
+Your thumbnails will now resize when:
+* Image Sizes in **Settings > Media** is modified,
+* Switching themes & plugins with different thumbnail / featured image sizes
 
 No settings pages, just install and activate and things should work right away.
 
@@ -19,6 +23,8 @@ This plugin solves all of the above. No need to regenerate anything anymore.
 # Features
 
 * Creates Resizes thumbnails on the fly
+* Handles Image Size settings changes in **Settings > Media**
+* Handles thumbnail / image size changes introduced by switching themes & plugins
 * Works automatically, no setup needed
 * All calls to `the_post_thumbnail` and other thumbnail functions are handled automatically
 * Handles image sizes created from `add_image_size`,
