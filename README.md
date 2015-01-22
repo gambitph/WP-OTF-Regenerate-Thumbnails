@@ -18,7 +18,9 @@ Notice the size of your thumbnails, most likely they're **150 x 150**. Do you se
 
 Now head over to **Settings > Media** and change your thumbnail size to something cooler, something rectangular, let's try **400 x 200**. Save it.
 
-Go back to your gallery that you previously created and refresh your browser. Most likely you *won't* be seeing **400 x 200** thumbnails there. Why? Read on.
+Go back to your gallery that you previously created and refresh your browser. Most likely you *won't* be seeing **400 x 200** thumbnails there.
+
+OTF Regenerate Thumbnails fixes this for you.
 
 # Why?
 
