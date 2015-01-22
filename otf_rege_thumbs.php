@@ -33,29 +33,29 @@ if ( ! function_exists( 'gambit_otf_regen_thumbs_media_downsize' ) ) {
 
 		// Gather all the different image sizes of WP (thumbnail, medium, large) and,
 		// all the theme/plugin-introduced sizes.
-		global $_bfi_thumb2_all_image_sizes;
-		if ( ! isset( $_bfi_thumb2_all_image_sizes ) ) {
+		global $_gambit_otf_regen_thumbs_all_image_sizes;
+		if ( ! isset( $_gambit_otf_regen_thumbs_all_image_sizes ) ) {
 		    global $_wp_additional_image_sizes;
 			
-			$_bfi_thumb2_all_image_sizes = array();
+			$_gambit_otf_regen_thumbs_all_image_sizes = array();
 			$interimSizes = get_intermediate_image_sizes();
 			
 			foreach ( $interimSizes as $sizeName ) {
 				if ( in_array( $sizeName, array( 'thumbnail', 'medium', 'large' ) ) ) {
 
-					$_bfi_thumb2_all_image_sizes[ $sizeName ]['width'] = get_option( $sizeName . '_size_w' );
-					$_bfi_thumb2_all_image_sizes[ $sizeName ]['height'] = get_option( $sizeName . '_size_h' );
-					$_bfi_thumb2_all_image_sizes[ $sizeName ]['crop'] = (bool) get_option( $sizeName . '_crop' );
+					$_gambit_otf_regen_thumbs_all_image_sizes[ $sizeName ]['width'] = get_option( $sizeName . '_size_w' );
+					$_gambit_otf_regen_thumbs_all_image_sizes[ $sizeName ]['height'] = get_option( $sizeName . '_size_h' );
+					$_gambit_otf_regen_thumbs_all_image_sizes[ $sizeName ]['crop'] = (bool) get_option( $sizeName . '_crop' );
 
 				} elseif ( isset( $_wp_additional_image_sizes[ $sizeName ] ) ) {
 
-					$_bfi_thumb2_all_image_sizes[ $sizeName ] = $_wp_additional_image_sizes[ $sizeName ];
+					$_gambit_otf_regen_thumbs_all_image_sizes[ $sizeName ] = $_wp_additional_image_sizes[ $sizeName ];
 				}
 			}
 		}
 		
 		// This now contains all the data that we have for all the image sizes
-		$allSizes = $_bfi_thumb2_all_image_sizes;
+		$allSizes = $_gambit_otf_regen_thumbs_all_image_sizes;
 	
 	    // If image size exists let WP serve it like normally
 	    $imagedata = wp_get_attachment_metadata( $id );
