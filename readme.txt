@@ -58,6 +58,13 @@ OTF Regenerate Thumbnails fixes this for you.
 4. But, my gallery thumbnails still look like it's all 80 x 80 :(
 5. After turning on the OTF Regenerate Thumbnails, my gallery now shows 400 x 200 thumbnails :)
 
+== Frequently Asked Questions ==
+
+* [OTF Regenerate Thumbnails GitHub Repository](https://github.com/gambitph/WP-OTF-Regenerate-Thumbnails)
+* [Issue Tracker](https://github.com/gambitph/WP-OTF-Regenerate-Thumbnails/issues)
+
+== Upgrade Notice ==
+
 == Changelog ==
 
 = 1.0 =
