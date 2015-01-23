@@ -1,0 +1,42 @@
+{
+	"name": "gambitph/otf-regenerate-thumbnails",
+	"description": "Automatically regenerates your thumbnails on the fly when thumbnail sizes change.",
+	"keywords": ["thumbnail", "thumbnails", "resize", "regenerate", "automatic", "featured image", "feature image", "on the fly", "otf"],
+	"homepage" : "https://github.com/gambitph/WP-OTF-Regenerate-Thumbnails",
+	"license": "GPLv2+",
+	"authors": [
+		{
+			"name": "Gambit Technologies",
+			"email" : "info@gambit.ph",
+			"homepage" : "http://www.titanframework.net/",
+			"role" : "Developer"
+		}
+	],
+	"type": "library",
+	"autoload": {
+		"files": ["otf_regen_thumbs.php"]
+	},
+	"archive": {
+		"exclude": [
+			"/bin", 
+			"/vendor", 
+			"/tests",
+			"/scss",
+			"/sass",
+			"*/composer.*",
+			"*/.*", 
+			"*.dist",
+			"*.md",
+			"*.codekit",
+			"*.rb",
+			"*.scss",
+			"LICENSE"
+		]
+	},
+	"scripts": {
+		"post-archive-cmd": [
+			"php -r \"\\$withVersion = true; \\$finalZip = basename( getcwd() ) . '.zip'; foreach ( array_merge(glob('*.php'), glob('*.css')) as \\$zipFile ) { \\$f = file_get_contents( \\$zipFile ); preg_match('/Plugin Name\\\\s*:\\\\s*([^\\\\n]+)/i', \\$f, \\$matches ); if (count(\\$matches) < 2) { preg_match('/Theme Name\\\\s*:\\\\s*([^\\\\n]+)/i', \\$f, \\$matches ); if (count(\\$matches) < 2) {continue;} } \\$name = \\$matches[1]; \\$zipName = trim(strtolower(str_replace(' ', '-', \\$name))); preg_match('/Version\\\\s*:\\\\s*([^\\\\n]+)/i', \\$f, \\$matches); if ( count(\\$matches) < 2 ){ continue;} \\$version = \\$matches[1]; \\$finalZip = \\$zipName . '-' . \\$version . '.zip'; if ( ! \\$withVersion ) { \\$finalZip = \\$zipName . '.zip'; } } foreach ( glob('*.zip') as \\$zipFile ) { rename( \\$zipFile, \\$finalZip ); break; }\"",
+			"php -r \"foreach ( glob('*.zip') as \\$zipFile ) { exec( 'mv ' . \\$zipFile . ' ..' ); } echo 'Created: ' . \\$zipFile . \\\"\\n\\\";\""
+		]
+	}
+}
