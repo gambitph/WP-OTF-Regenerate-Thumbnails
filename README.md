@@ -30,7 +30,7 @@ There are regenerate thumbnail plugins already existing for WordPress, but those
 
 Lastly, WP functions allow [2-item array sizes](http://codex.wordpress.org/Function_Reference/the_post_thumbnail) to be used for thumbnails; however those do not work as expected because of the resize behavior of WordPress.
 
-This plugin solves all of the above. No need to regenerate anything anymore since they're done on the fly with only a little overhead.
+This plugin solves all of the above. No need to regenerate anything anymore since they're done on the fly.
 
 # Features
 
@@ -41,6 +41,7 @@ This plugin solves all of the above. No need to regenerate anything anymore sinc
 * All calls to `the_post_thumbnail` and other thumbnail functions are handled automatically
 * Handles image sizes created from `add_image_size`,
 * Handles [2-item array sizes](http://codex.wordpress.org/Function_Reference/the_post_thumbnail)
+* No **custom scripts that perform saving/resizing**, everything is performed by WordPress.
 
 # Installation
 
