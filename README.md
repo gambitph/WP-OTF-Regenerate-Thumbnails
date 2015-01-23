@@ -1,4 +1,4 @@
-# WP On the fly (OTF) Regenerate Thumbnails
+# OTF Regenerate Thumbnails
 
 #### Regenerates thumbnails on the fly for WordPress. 
 
