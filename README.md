@@ -1,6 +1,6 @@
 # OTF Regenerate Thumbnails
 
-#### Regenerates thumbnails on the fly for WordPress. 
+#### Regenerates thumbnails on the fly for WordPress.
 
 This plugin behaves similarly to [Regenerate Thumbnails](https://wordpress.org/plugins/regenerate-thumbnails/) except that images are resized automatically / on the fly, when they are used. Once created, they won't be processed again.
 
@@ -9,6 +9,8 @@ Your thumbnails will now resize when:
 * Switching themes & plugins with different thumbnail / featured image sizes
 
 No settings pages, just install and activate and things should work right away.
+
+Get it from the [WordPress.org plugin page](https://wordpress.org/plugins/otf-regenerate-thumbnails/)
 
 # What are you talking about?
 
