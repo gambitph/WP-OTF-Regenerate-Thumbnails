@@ -42,6 +42,7 @@ This plugin solves all of the above. No need to regenerate anything anymore sinc
 * Handles image sizes created from `add_image_size`,
 * Handles [2-item array sizes](http://codex.wordpress.org/Function_Reference/the_post_thumbnail)
 * No **custom scripts that perform saving/resizing**, everything is performed by WordPress.
+* Works great with [Jetpack's Photon module](http://jetpack.me/support/photon/)
 
 # Installation
 
