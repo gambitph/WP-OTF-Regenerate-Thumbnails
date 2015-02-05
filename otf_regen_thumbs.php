@@ -4,7 +4,7 @@ Plugin Name: OTF Regenerate Thumbnails
 Plugin URI: http://github.com
 Description: Automatically regenerates your thumbnails on the fly (OTF) after changing the thumbnail sizes or switching themes.
 Author: Benjamin Intal - Gambit Technologies Inc
-Version: 0.1
+Version: 0.2
 Author URI: http://gambit.ph
 */
 
@@ -67,9 +67,14 @@ if ( ! function_exists( 'gambit_otf_regen_thumbs_media_downsize' ) ) {
 		
 		// If the size given is a string / a name of a size
 		if ( is_string( $size ) ) {
+			
+			// If WP doesn't know about the image size name, then we can't really do any resizing of our own
+			if ( empty( $allSizes[ $size ] ) ) {
+				return false;
+			}
 		
 			// If the size has already been previously created, use it
-			if ( isset( $imagedata['sizes'][ $size ] ) && ! empty( $allSizes[ $size ] ) ) {
+			if ( ! empty( $imagedata['sizes'][ $size ] ) && ! empty( $allSizes[ $size ] ) ) {
 			
 				// But only if the size remained the same
 				if ( $allSizes[ $size ]['width'] == $imagedata['sizes'][ $size ]['width']
