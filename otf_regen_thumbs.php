@@ -68,6 +68,10 @@ if ( ! function_exists( 'gambit_otf_regen_thumbs_media_downsize' ) ) {
 		// If the size given is a string / a name of a size
 		if ( is_string( $size ) ) {
 			
+			// If the size is full, return false
+			if( $size == 'full' )
+				return false;
+		
 			// If WP doesn't know about the image size name, then we can't really do any resizing of our own
 			if ( empty( $allSizes[ $size ] ) ) {
 				return false;
