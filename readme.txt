@@ -34,6 +34,21 @@ Go back to your gallery that you previously created and refresh your browser. Mo
 
 OTF Regenerate Thumbnails fixes this for you.
 
+= Usage =
+
+OTF Regenerate Thumbnails should work right away, and your images should get resized when the dimensions get changed.
+
+**For developers & tinkerers, ensuring your images get resized properly requires you to use WordPress' image functions to display featured images and image attachments.** Don't worry, this is a good thing.
+
+Make sure you use these WordPress functions **every time you display images**:
+
+* [`wp_get_attachment_image_src`](http://codex.wordpress.org/Function_Reference/wp_get_attachment_image_src)
+* [`wp_get_attachment_image`](http://codex.wordpress.org/Function_Reference/wp_get_attachment_image)
+* [`the_post_thumbnail`](http://codex.wordpress.org/Function_Reference/the_post_thumbnail)
+* [`get_the_post_thumbnail`](http://codex.wordpress.org/Function_Reference/get_the_post_thumbnail)
+
+You can also add size *names* using [`add_image_size`](http://codex.wordpress.org/Function_Reference/add_image_size)
+
 = Features =
 
 * Creates Resizes thumbnails on the fly
