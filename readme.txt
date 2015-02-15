@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== OTF Regenerate Thumbnails ===
 Contributors: bfintal
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=D2MK28E7BDLHC
 Tags: thumbnail, thumbnails, resize, regenerate, automatic, featured image, feature image, on the fly, otf
