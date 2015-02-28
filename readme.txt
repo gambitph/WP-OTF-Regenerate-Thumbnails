@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: thumbnail, thumbnails, resize, regenerate, automatic, featured image, feature image, on the fly, otf
 Requires at least: 3.8
 Tested up to: 4.1
-Stable tag: 0.2
+Stable tag: 0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -82,6 +82,10 @@ You can also add size *names* using [`add_image_size`](http://codex.wordpress.or
 == Upgrade Notice ==
 
 == Changelog ==
+
+= 0.3 =
+
+* Add new image size to attachment meta so WordPress can perform actions on the image
 
 = 0.2 =
 
