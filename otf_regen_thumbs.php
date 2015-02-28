@@ -142,7 +142,14 @@ if ( ! function_exists( 'gambit_otf_regen_thumbs_media_downsize' ) ) {
 	            $size[1],
 	            true
 	        );
-		
+	        
+		// Get attachment meta so we can add new size
+            	$imagedata = wp_get_attachment_metadata( $id );
+
+            	// Save the new size in WP
+            	$imagedata['sizes'][ $size[0].'x'.$size[1] ] = $resized;           
+            	wp_update_attachment_metadata( $id, $imagedata );
+            	
 			// Resize somehow failed
 			if ( ! $resized ) {
 				return false;
