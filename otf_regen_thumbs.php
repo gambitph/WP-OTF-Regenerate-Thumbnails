@@ -8,6 +8,8 @@ Version: 0.3
 Author URI: http://gambit.ph
 */
 
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 /**
  * Simple but effectively resizes images on the fly. Doesn't upsize, just downsizes like how WordPress likes it.
  * If the image already exists, it's served. If not, the image is resized to the specified size, saved for
