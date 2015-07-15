@@ -125,8 +125,8 @@ if ( ! function_exists( 'gambit_otf_regen_thumbs_media_downsize' ) ) {
 			$imagePath = get_attached_file( $id );
 
 			$crop = array_key_exists(2, $size) ? $size[2] : true;
-			$newWidth = $size[0];
-			$newHeight = $size[1];
+			$new_width = $size[0];
+			$new_height = $size[1];
 
 			// If crop is false, calculate new image dimensions
 			if (!$crop) {
@@ -135,25 +135,25 @@ if ( ! function_exists( 'gambit_otf_regen_thumbs_media_downsize' ) ) {
 				if ($large[1] > $large[2]) {
 					// Width > height
 					$ratio = $large[1] / $size[0];
-					$newHeight = round($large[2] / $ratio);
-					$newWidth = $size[0];
+					$new_height = round($large[2] / $ratio);
+					$new_width = $size[0];
 				}
 				else {
 					// Height > width
 					$ratio = $large[2] / $size[1];
-					$newHeight = $size[1];
-					$newWidth = round($large[1] / $ratio);
+					$new_height = $size[1];
+					$new_width = round($large[1] / $ratio);
 				}
 			}
 
 			// This would be the path of our resized image if the dimensions existed
 			$imageExt = pathinfo( $imagePath, PATHINFO_EXTENSION );
-			$imagePath = preg_replace( '/^(.*)\.' . $imageExt . '$/', sprintf( '$1-%sx%s.%s', $newWidth, $newHeight, $imageExt ) , $imagePath );
+			$imagePath = preg_replace( '/^(.*)\.' . $imageExt . '$/', sprintf( '$1-%sx%s.%s', $new_width, $new_height, $imageExt ) , $imagePath );
 			$att_url = wp_get_attachment_url( $id );
 		
 			// If it already exists, serve it
 			if ( file_exists( $imagePath ) ) {
-				return array( dirname( $att_url ) . '/' . basename( $imagePath ), $newWidth, $newHeight, $crop );
+				return array( dirname( $att_url ) . '/' . basename( $imagePath ), $new_width, $new_height, $crop );
 			}
 
 			// If not, resize the image...
