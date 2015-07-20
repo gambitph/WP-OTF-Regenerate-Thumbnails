@@ -130,19 +130,26 @@ if ( ! function_exists( 'gambit_otf_regen_thumbs_media_downsize' ) ) {
 
 			// If crop is false, calculate new image dimensions
 			if (!$crop) {
-				$large = wp_get_attachment_image_src($id, 'large');
+				if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'photon' ) ) {
+					add_filter( 'jetpack_photon_override_image_downsize', '__return_true' );
+					$trueData = wp_get_attachment_image_src($id, 'large');
+					remove_filter( 'jetpack_photon_override_image_downsize', '__return_true' );
+				}
+				else {
+					$trueData = wp_get_attachment_image_src($id, 'large');
+				}
 
-				if ($large[1] > $large[2]) {
+				if ($trueData[1] > $trueData[2]) {
 					// Width > height
-					$ratio = $large[1] / $size[0];
-					$new_height = round($large[2] / $ratio);
+					$ratio = $trueData[1] / $size[0];
+					$new_height = round($trueData[2] / $ratio);
 					$new_width = $size[0];
 				}
 				else {
 					// Height > width
-					$ratio = $large[2] / $size[1];
+					$ratio = $trueData[2] / $size[1];
 					$new_height = $size[1];
-					$new_width = round($large[1] / $ratio);
+					$new_width = round($trueData[1] / $ratio);
 				}
 			}
 
