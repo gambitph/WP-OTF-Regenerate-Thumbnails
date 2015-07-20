@@ -19,8 +19,6 @@ Author URI: http://gambit.ph
  */
 if ( ! function_exists( 'gambit_otf_regen_thumbs_media_downsize' ) ) {
 	
-	add_filter( 'image_downsize', 'gambit_otf_regen_thumbs_media_downsize', 10, 3 );
-	
 	/**
 	 * The downsizer. This only does something if the existing image size doesn't exist yet.
 	 *
@@ -189,4 +187,5 @@ if ( ! function_exists( 'gambit_otf_regen_thumbs_media_downsize' ) ) {
 	
 		return false;
 	}
+	add_filter( 'image_downsize', 'gambit_otf_regen_thumbs_media_downsize', 10, 3 );
 }
